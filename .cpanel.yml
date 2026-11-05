@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /bin/bash $HOME/sadan-tobarana/deploy/cpanel/deploy.sh > $HOME/sadan-tobarana-deploy.log 2>&1
