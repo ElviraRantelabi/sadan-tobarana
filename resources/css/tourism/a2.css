@@ -1,0 +1,647 @@
+/* =========================================================
+   SA'DAN TO'BARANA SMART TOURISM — A2
+   High Features + Low UI/UX
+   Fitur dan struktur konten mengikuti A1, tampilan sengaja dibuat sederhana.
+   File: resources/css/tourism/a2.css
+   ========================================================= */
+
+.ui-low.a2-page {
+    color: #222;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.ui-low.a2-page *,
+.ui-low.a2-page *::before,
+.ui-low.a2-page *::after {
+    box-sizing: border-box;
+}
+
+.ui-low.a2-page a {
+    color: #245b45;
+    text-decoration: underline;
+}
+
+.ui-low.a2-page section {
+    scroll-margin-top: 70px;
+}
+
+.ui-low.a2-page .container {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.ui-low.a2-page .section-padding {
+    padding: 42px 0;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.ui-low.a2-page .b2-navbar {
+    background: #f2f2f2 !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 8px 0;
+}
+
+.ui-low.a2-page .b2-navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #222;
+    text-decoration: none;
+}
+
+.ui-low.a2-page .b2-navbar-logo {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.ui-low.a2-page .b2-navbar-logo-fallback {
+    display: none;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    background: #ddd;
+    color: #222;
+}
+
+.ui-low.a2-page .b2-navbar-name {
+    color: #222;
+    font-weight: 600;
+}
+
+.ui-low.a2-page .navbar-nav {
+    gap: 4px;
+}
+
+.ui-low.a2-page .navbar-nav .nav-link {
+    color: #222;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.ui-low.a2-page h1,
+.ui-low.a2-page h2,
+.ui-low.a2-page h3 {
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.ui-low.a2-page h1 {
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.ui-low.a2-page h2 {
+    font-size: 27px;
+    margin: 8px 0 14px;
+}
+
+.ui-low.a2-page h3 {
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+.ui-low.a2-page p {
+    color: #555;
+    margin: 8px 0 14px;
+}
+
+.ui-low.a2-page .section-eyebrow,
+.ui-low.a2-page .section-number,
+.ui-low.a2-page .cta-eyebrow,
+.ui-low.a2-page .activity-label {
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+}
+
+.ui-low.a2-page .section-heading {
+    display: block;
+    margin-bottom: 22px;
+}
+
+.ui-low.a2-page .section-number {
+    display: block;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ui-low.a2-page .hero {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 48px 0;
+    background-color: #245b45;
+}
+
+.ui-low.a2-page .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .48);
+}
+
+.ui-low.a2-page .hero-content {
+    position: relative;
+    color: #fff;
+}
+
+.ui-low.a2-page .hero h1,
+.ui-low.a2-page .hero p,
+.ui-low.a2-page .hero .hero-badge {
+    color: #fff;
+}
+
+.ui-low.a2-page .hero p {
+    max-width: 650px;
+}
+
+.ui-low.a2-page .hero-badge {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.ui-low.a2-page .status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.ui-low.a2-page .hero-scroll {
+    display: none;
+}
+
+/* =========================================================
+   ABOUT, CULTURE, WEAVING
+   ========================================================= */
+
+.ui-low.a2-page .about-grid,
+.ui-low.a2-page .culture-grid,
+.ui-low.a2-page .weaving-grid {
+    display: block;
+}
+
+.ui-low.a2-page .text-link {
+    display: inline-block;
+    margin-top: 6px;
+}
+
+/* =========================================================
+   DESTINATION
+   ========================================================= */
+
+.ui-low.a2-page .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.ui-low.a2-page .destination-card {
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.ui-low.a2-page .destination-info {
+    display: block;
+    padding: 12px;
+}
+
+.ui-low.a2-page .destination-info p {
+    margin-bottom: 4px;
+}
+
+.ui-low.a2-page .card-category {
+    color: #666;
+    font-size: 11px;
+}
+
+.ui-low.a2-page .card-arrow {
+    display: none;
+}
+
+/* =========================================================
+   CULTURE AND WEAVING INFORMATION
+   ========================================================= */
+
+.ui-low.a2-page .culture-points {
+    margin-top: 14px;
+}
+
+.ui-low.a2-page .culture-point {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-low.a2-page .point-number,
+.ui-low.a2-page .weaving-number {
+    color: #555;
+    font-weight: 600;
+}
+
+.ui-low.a2-page .culture-point p {
+    margin: 3px 0;
+}
+
+.ui-low.a2-page .weaving-detail > div {
+    display: flex;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-low.a2-page .detail-symbol {
+    color: #555;
+}
+
+.ui-low.a2-page .weaving-detail small {
+    display: block;
+    color: #666;
+}
+
+.ui-low.a2-page .btn {
+    display: inline-block;
+    padding: 8px 14px !important;
+    border: 1px solid #777 !important;
+    border-radius: 2px !important;
+    color: #222 !important;
+    background: #eee !important;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: none !important;
+}
+
+/* =========================================================
+   ACTIVITIES
+   ========================================================= */
+
+.ui-low.a2-page .activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.ui-low.a2-page .activity-card {
+    padding: 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.ui-low.a2-page .activity-card-featured {
+    background: #f5f5f5;
+    border-color: #bbb;
+}
+
+.ui-low.a2-page .activity-icon {
+    color: #555;
+    font-size: 22px;
+}
+
+/* =========================================================
+   LOCATION AND CONTACT
+   ========================================================= */
+
+.ui-low.a2-page .location-section {
+    background: #fff;
+}
+
+.ui-low.a2-page .location-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background: #f5f5f5;
+    box-shadow: none;
+}
+
+.ui-low.a2-page .location-content {
+    display: block;
+}
+
+.ui-low.a2-page .location-contact {
+    display: block;
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px solid #ccc;
+}
+
+.ui-low.a2-page .location-contact h3 {
+    margin-bottom: 12px;
+}
+
+.ui-low.a2-page .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background: #fff;
+}
+
+.ui-low.a2-page .contact-item i {
+    color: #555;
+    font-size: 20px;
+}
+
+.ui-low.a2-page .contact-item span {
+    color: #222;
+    font-weight: 600;
+}
+
+.ui-low.a2-page .contact-item p {
+    margin: 2px 0 0;
+}
+
+/* =========================================================
+   CTA AND FOOTER
+   ========================================================= */
+
+.ui-low.a2-page .cta-section {
+    padding: 35px 0;
+    background: #eee;
+    text-align: left;
+}
+
+.ui-low.a2-page .cta-content h2 {
+    margin-top: 8px;
+}
+
+.ui-low.a2-page .btn-light {
+    background: #fff !important;
+}
+
+.ui-low.a2-page .footer {
+    padding: 28px 0 12px;
+    color: #333;
+    background: #eee;
+    border-top: 1px solid #ccc;
+}
+
+.ui-low.a2-page .footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.ui-low.a2-page .footer-logo {
+    color: #222;
+    text-decoration: none;
+}
+
+.ui-low.a2-page .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ui-low.a2-page .footer-links a {
+    color: #444;
+    font-size: 13px;
+}
+
+.ui-low.a2-page .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #ccc;
+    color: #666;
+    font-size: 12px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+    .ui-low.a2-page .destination-grid,
+    .ui-low.a2-page .activity-grid,
+    .ui-low.a2-page .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .ui-low.a2-page .section-padding {
+        padding: 30px 0;
+    }
+
+    .ui-low.a2-page .hero {
+        min-height: 260px;
+    }
+
+    .ui-low.a2-page .location-card {
+        padding: 14px;
+    }
+
+    .ui-low.a2-page .footer-bottom {
+        display: block;
+    }
+}
+
+/* =========================================================
+   A2 ADDITIONAL SECTIONS — fitur mengikuti A1, gaya tetap sederhana
+   ========================================================= */
+
+.ui-low.a2-page .quick-section {
+    padding: 18px 0;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.ui-low.a2-page .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.ui-low.a2-page .quick-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #222;
+    text-decoration: none;
+}
+
+.ui-low.a2-page .quick-icon,
+.ui-low.a2-page .quick-arrow {
+    color: #555;
+}
+
+.ui-low.a2-page .quick-item strong,
+.ui-low.a2-page .quick-item small {
+    display: block;
+}
+
+.ui-low.a2-page .quick-item small {
+    color: #666;
+    font-size: 11px;
+}
+
+.ui-low.a2-page .reservation-section,
+.ui-low.a2-page .contact-section {
+    padding: 42px 0;
+    background: #fff;
+}
+
+.ui-low.a2-page .reservation-form {
+    max-width: 760px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+}
+
+.ui-low.a2-page .reservation-form label {
+    display: block;
+    margin: 12px 0 4px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.ui-low.a2-page .reservation-form input,
+.ui-low.a2-page .reservation-form select,
+.ui-low.a2-page .reservation-form textarea {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    background: #fff;
+    color: #222;
+    font: inherit;
+}
+
+.ui-low.a2-page .reservation-form button {
+    margin-top: 16px;
+}
+
+.ui-low.a2-page .reservation-form > p {
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+.ui-low.a2-page .river-monitor-wrap {
+    margin-top: 22px;
+}
+
+.ui-low.a2-page .river-live-card {
+    padding: 18px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+}
+
+.ui-low.a2-page .river-live-heading,
+.ui-low.a2-page .river-live-content,
+.ui-low.a2-page .river-live-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.ui-low.a2-page .river-live-badge {
+    padding: 4px 8px;
+    border: 1px solid #aaa;
+    color: #444;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.ui-low.a2-page .river-live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: #777;
+}
+
+.ui-low.a2-page .river-live-content {
+    justify-content: flex-start;
+    margin: 14px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.ui-low.a2-page .river-live-icon {
+    font-size: 24px;
+    color: #555;
+}
+
+.ui-low.a2-page .river-live-label,
+.ui-low.a2-page .river-live-footer,
+.ui-low.a2-page .river-safety-note {
+    color: #555;
+    font-size: 12px;
+}
+
+.ui-low.a2-page .river-live-info h4 {
+    margin: 4px 0;
+    font-size: 17px;
+}
+
+.ui-low.a2-page .river-live-footer {
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.ui-low.a2-page .contact-section .container {
+    padding: 18px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+}
+
+.ui-low.a2-page .cta-section {
+    margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    .ui-low.a2-page .quick-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ui-low.a2-page .river-live-heading,
+    .ui-low.a2-page .river-live-footer {
+        display: block;
+    }
+
+    .ui-low.a2-page .river-live-badge {
+        display: inline-block;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ui-low.a2-page .quick-grid {
+        grid-template-columns: 1fr;
+    }
+}

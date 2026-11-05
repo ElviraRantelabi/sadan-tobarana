@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../../resources/**/*.blade.php';
+
+@theme {
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+/* =========================================
+   INSTRUKSI EKSPERIMEN SMART TOURISM
+   Prefix: instruction-
+========================================= */
+
+.instruction-page {
+    --instruction-primary: #174c3c;
+    --instruction-primary-dark: #103a2e;
+    --instruction-background: #f5f7f4;
+    --instruction-text: #24352c;
+    --instruction-muted: #637168;
+    --instruction-border: #e0e8e1;
+
+    min-height: 100vh;
+    padding: 24px;
+    background: var(--instruction-background);
+    color: var(--instruction-text);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.instruction-page *,
+.instruction-page *::before,
+.instruction-page *::after {
+    box-sizing: border-box;
+}
+
+/* MAIN CARD */
+
+.instruction-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 32px;
+    overflow: hidden;
+    border: 1px solid var(--instruction-border);
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 10px 35px rgba(23, 76, 60, 0.06);
+}
+
+/* HEADING */
+
+.instruction-title {
+    margin: 0 0 16px;
+    color: var(--instruction-primary);
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.instruction-description {
+    margin: 0 0 16px;
+    color: var(--instruction-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* TREATMENT INFORMATION */
+
+/* =====================================
+   INSTRUCTION STEPS - THREE CARDS
+===================================== */
+
+.instruction-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    margin: 28px 0;
+}
+
+.instruction-step-card {
+    min-width: 0;
+    padding: 22px 18px;
+    border: 1px solid #e0e8e1;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.instruction-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    background: #edf3ed;
+    color: #174c3c;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.instruction-step-card h3 {
+    margin: 0 0 10px;
+    color: #174c3c;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.instruction-step-card p {
+    margin: 0;
+    color: #637168;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.instruction-respondent {
+    margin: 24px 0;
+    padding: 14px 18px;
+    border: 1px solid #dce8dc;
+    border-left: 4px solid var(--instruction-primary);
+    border-radius: 8px;
+    background: #edf3ed;
+}
+
+.instruction-respondent p {
+    margin: 0;
+    color: var(--instruction-text);
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 700px) {
+    .instruction-steps {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .instruction-step-card {
+        padding: 18px;
+    }
+
+    .instruction-step-number {
+        margin-bottom: 12px;
+    }
+}
+
+/* START EXPERIMENT */
+
+/* Checkbox */
+#agreement {
+    width: 15px;
+    height: 15px;
+    margin: 2px 0 0;
+    flex-shrink: 0;
+    accent-color: #245c43;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+label[for="agreement"] {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.7;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+label[for="agreement"]:hover {
+    color: #245c43;
+}
+
+#agreement:focus-visible {
+    outline: 2px solid rgba(36, 92, 67, 0.3);
+    outline-offset: 3px;
+}
+
+#agreement:checked {
+    accent-color: #245c43;
+}
+
+.instruction-start-text {
+    margin: 24px 0 14px;
+    color: var(--instruction-muted);
+    font-size: 14px;
+}
+
+/* BUTTON: UNIQUE CLASS, DOES NOT AFFECT SOP BUTTON */
+
+.instruction-start-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background: var(--instruction-primary);
+    color: #f5f7f4;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.instruction-start-button:hover {
+    background: var(--instruction-primary-dark);
+    box-shadow: 0 5px 14px rgba(23, 76, 60, 0.16);
+    transform: translateY(-1px);
+}
+
+.instruction-start-button:focus-visible {
+    outline: 3px solid rgba(23, 76, 60, 0.3);
+    outline-offset: 4px;
+}
+
+.instruction-start-button:active {
+    transform: translateY(0);
+}
+
+.instruction-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.instruction-start-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    background: #245c43;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.instruction-start-button:hover {
+    background: #194531;
+    color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .instruction-page {
+        padding: 12px;
+    }
+
+    .instruction-container {
+        margin: 20px auto;
+        padding: 23px 19px;
+        border-radius: 12px;
+    }
+
+    .instruction-title {
+        font-size: 27px;
+    }
+
+    .instruction-description {
+        font-size: 13px;
+    }
+
+    .instruction-respondent {
+        padding: 12px 14px;
+    }
+
+    .instruction-task-image {
+        border-radius: 8px;
+    }
+
+    .instruction-start-button {
+        min-height: 48px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .instruction-start-button {
+        transition: none;
+    }
+}
